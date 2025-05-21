@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -7,10 +7,6 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route("/web/inscricao", methods=["GET", "POST"])
-def inscricao_web():
-        data = request.form
-        return jsonify(data)
      
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,jsonify
 
 app = Flask(__name__)
 
@@ -39,7 +39,14 @@ VAGA=[
               'local': 'Pemba',
               'salario': '45000 mt',
                 'cantidados': '3', 
-            }  
+            },
+    {
+        'id':6,
+          'titulo': 'Engenhraria de softwere', 
+          'local': 'Sofala',
+          'salario': '55000 mt',
+            'cantidados': '9', 
+        }  
 ]
 
 
@@ -49,7 +56,9 @@ def home():
     vagas=VAGA
     return render_template("home.html", vagas=vagas)
 
-     
+@app.route("/vagas")
+def lista_vagas():
+    return jsonify(VAGA)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

@@ -13,7 +13,7 @@ VAGA=[
     {
         'id':2,
           'titulo': 'Medicina', 
-          'local': 'Nampula',
+          'local': 'Beira',
           'salario': '1850 mt',
             'cantidados': '5', 
         },
@@ -28,7 +28,7 @@ VAGA=[
         {
         'id':4,
           'titulo': 'Enfermagem geral', 
-          'local': 'Nacal porto',
+          'local': 'Nacala porto',
           'salario': '45000 mt',
             'cantidados': '8', 
         },
@@ -36,7 +36,7 @@ VAGA=[
         {
             'id':5,
               'titulo': 'Engenhraria de dados', 
-              'local': 'Nampula',
+              'local': 'Pemba',
               'salario': '45000 mt',
                 'cantidados': '3', 
             }  

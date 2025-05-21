@@ -20,13 +20,41 @@
   
   <h2 class="text-center">Vagas</h2>
   <p>
+   
     {% for vaga in vagas %}
-    <h3>{{vaga.titulo}}</h3>
-    <p>{{vaga.descricao}}</p>
-    {% endfor %}
-  </p>
-  <div class="text-center">
-    <buthon class="btn btn-primary">Entrar em Contacto</buthon>
+    <div class="row border-bottom" style="margin-bottom: 15px;">
+      <div class="col-9">
+        <h4 style="color: rgb(120,120,120);margin-bottom: 4px;">
+          {{vaga.titulo}}
+        </h4>
+    
+        <div>
+        <strong>Salario:</strong>
+        {{vaga.salario}}
+        </div>
+
+        <div>
+        <strong>local:</strong>
+        {{vaga.local}}
+        </div>
+
+        <div>
+        <strong>Numero da vaga:</strong>
+        {{vaga.cantidados}}
+        </div>
+      </div>
+   <div class="col-3">
+      <button type="button"class="black " >Enviar</button>
+   </div>
   </div>
+
+    {% endfor %}
+   
+  
+  </p>
+
+  <div class="text-center">
+      <buthon class="btn btn-primary">Entrar em Contacto</buthon>
+   </div>
 </body>
 </html>

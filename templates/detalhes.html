@@ -15,9 +15,32 @@
   <h5>Responsablidade</h5>
   <h5>Salario</h5>
   <h5>Local da vaga.etc</h5>
+  <h2 class="text-center mt-3">Formulario de Inscricao da Vaga</h2>
    <hr>
- 
-   
+   <hr>
+  
+  <form class="form-control" method="POST" action="/web/inscricao">
+    <div class="mb-2">
+      <label>Nome</label> <br>
+      <input class="form-control" type="text" name="name" placeholder="Digite seu Nome">
+    </div>
 
+    <div class="mb-2">
+      <label>Email</label> <br>
+      <input class="form-control" type="email" name="email" placeholder="Digite seu Email">
+    </div>
+
+    <div class="mb-2">
+      <label>LinkedIn</label> <br>
+      <input class="form-control" type="url" name="linkedin" placeholder="Digite seu LinkedIn">
+    </div>
+
+    <div class="mb-2">
+      <label>Experiência</label> <br>
+      <textarea name="experiencia" class="form-control" placeholder="Descreva sua experiência"></textarea> <br>
+      <input class="btn btn-success" type="submit" name="submit" value="Enviar">
+    </div>
+  </form>
+   
 </body>
 </html>

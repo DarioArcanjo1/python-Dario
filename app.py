@@ -1,4 +1,4 @@
-from flask import Flask, render_template,jsonify
+from flask import Flask, render_template,jsonify, request
 
 app = Flask(__name__)
 
@@ -68,6 +68,11 @@ def mostra_vaga(id):
     if not vaga:
         return "Not Found", 404
     return render_template('detalhes.html', vaga=vaga)
+
+@app.route("/web/inscricao", methods=["GET", "POST"])
+def inscricao_web():
+        data = request.form
+        return jsonify(data)
 
 
 if __name__ == "__main__":

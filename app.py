@@ -24,7 +24,7 @@ VAGA=[
           'salario': '25000 mt',
             'cantidados': '12', 
         },
-    
+
         {
         'id':4,
           'titulo': 'Enfermagem geral', 
@@ -46,7 +46,8 @@ VAGA=[
           'local': 'Sofala',
           'salario': '55000 mt',
             'cantidados': '9', 
-        }  
+        }
+   
 ]
 
 
@@ -59,6 +60,15 @@ def home():
 @app.route("/vagas")
 def lista_vagas():
     return jsonify(VAGA)
+
+
+@app.route("/vaga/<id>")
+def mostra_vaga(id):
+    vaga = VAGA
+    if not vaga:
+        return "Not Found", 404
+    return render_template('detalhes.html', vaga=vaga)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
